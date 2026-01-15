@@ -4,11 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://53cb0rg6a3bv" path="res://assets/icon.svg" id="2_yk4ok"]
 [ext_resource type="Script" uid="uid://21k8iecmgki4" path="res://Objects/Scripts/camera.gd" id="3_yk4ok"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n6db0"]
-size = Vector2(129.75012, 128)
+[sub_resource type="CircleShape2D" id="CircleShape2D_yk4ok"]
+radius = 62.625175
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 7
+floor_snap_length = 4.0
+platform_on_leave = 2
+safe_margin = 0.032
 script = ExtResource("1_n6db0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,7 +21,7 @@ texture = ExtResource("2_yk4ok")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.050023317, 0)
 scale = Vector2(0.3999992, 0.39999694)
-shape = SubResource("RectangleShape2D_n6db0")
+shape = SubResource("CircleShape2D_yk4ok")
 debug_color = Color(0.85157263, 0.78608793, 1, 0.41960785)
 
 [node name="Camera2D" type="Camera2D" parent="."]

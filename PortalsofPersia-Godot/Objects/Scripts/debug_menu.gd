@@ -4,7 +4,7 @@ var curPos;
 
 func _physics_process(_delta: float) -> void:
 	curPos = get_global_mouse_position();
-	$CursorPos.text = "(" + str(curPos.x) + ", " + str(curPos.y) + ")"
+	$CursorPos.text = "(" + str(floor(curPos.x)) + ", " + str(floor(curPos.y)) + ")"
 	$CursorPos.position = get_local_mouse_position();
 
 func _input(event) -> void:
