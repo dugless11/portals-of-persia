@@ -2,7 +2,7 @@ extends Node2D
 
 var curPos;
 
-func _physics_process(_delta: float) -> void:
+func _process(_delta: float) -> void:
 	curPos = get_global_mouse_position();
 	$CursorPos.text = "(" + str(floor(curPos.x)) + ", " + str(floor(curPos.y)) + ")"
 	$CursorPos.position = get_local_mouse_position();

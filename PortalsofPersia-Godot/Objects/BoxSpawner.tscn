@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgun0vjt4oy82"]
+
+[ext_resource type="Script" uid="uid://bi7cqn84adtuh" path="res://Objects/Scripts/box_spawner.gd" id="1_8ehk2"]
+[ext_resource type="Texture2D" uid="uid://53cb0rg6a3bv" path="res://assets/icon.svg" id="2_gpuea"]
+
+[node name="BoxSpawner" type="Node2D"]
+script = ExtResource("1_8ehk2")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_gpuea")

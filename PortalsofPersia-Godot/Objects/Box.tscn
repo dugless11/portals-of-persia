@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhbj3oou6cb25"]
+[gd_scene load_steps=5 format=3 uid="uid://bhbj3oou6cb25"]
 
 [ext_resource type="Texture2D" uid="uid://dwgjyb8e4y18u" path="res://assets/placeholderBox.png" id="1_2s26f"]
+[ext_resource type="Script" uid="uid://blue8o1rl0mlj" path="res://Objects/Scripts/box.gd" id="1_ewiju"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewiju"]
 size = Vector2(128, 128)
 
-[node name="RigidBody2D" type="RigidBody2D" groups=["Rigidbody"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s26f"]
+size = Vector2(42, 42)
+
+[node name="Box" type="RigidBody2D" groups=["Rigidbody"]]
 collision_layer = 6
 collision_mask = 7
+mass = 1.509
+continuous_cd = 2
+script = ExtResource("1_ewiju")
 
 [node name="PlaceholderBox" type="Sprite2D" parent="."]
 position = Vector2(0, 3.1843501e-06)
@@ -18,3 +25,10 @@ texture = ExtResource("1_2s26f")
 scale = Vector2(0.3339033, 0.3339033)
 shape = SubResource("RectangleShape2D_ewiju")
 debug_color = Color(0.72671264, 0.46548343, 0.27869663, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2s26f")
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]

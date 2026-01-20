@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://crvlks1utkvu5"]
+
+[ext_resource type="Texture2D" uid="uid://53cb0rg6a3bv" path="res://assets/icon.svg" id="1_vowpr"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yidyw"]
+particle_flag_disable_z = true
+angle_min = -336.0
+angle_max = 322.30002
+spread = 180.0
+flatness = 1.0
+initial_velocity_min = 242.86
+initial_velocity_max = 642.86
+radial_velocity_min = -476.19
+radial_velocity_max = 390.47998
+gravity = Vector3(0, 0, 0)
+hue_variation_min = -0.07000002
+hue_variation_max = 0.09999997
+
+[node name="Explosion" type="GPUParticles2D"]
+amount = 60
+texture = ExtResource("1_vowpr")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_yidyw")

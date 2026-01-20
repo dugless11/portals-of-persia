@@ -26,3 +26,4 @@ func _physics_process(delta: float) -> void:
 		position = lerp(position, downPos, 0.03)
 	else:
 		position = lerp(position, upPos, 0.03)
+		
