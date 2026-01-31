@@ -37,7 +37,7 @@ position = Vector2(433, 592)
 scale = Vector2(1, 0.3)
 
 [node name="Node2D2" parent="." unique_id=1062318447 instance=ExtResource("8_qc3lj")]
-position = Vector2(33, 160)
+position = Vector2(34, 160)
 
 [node name="Node2D3" parent="." unique_id=913388823 instance=ExtResource("8_qc3lj")]
 z_index = -2
