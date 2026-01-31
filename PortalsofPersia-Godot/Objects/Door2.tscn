@@ -1,58 +1,58 @@
-[gd_scene format=3 uid="uid://v72h5ex1uive"]
+[gd_scene format=3 uid="uid://bwvkbvnv7wia2"]
 
-[ext_resource type="Script" uid="uid://1lmsksuxrj00" path="res://Objects/Scripts/door.gd" id="1_7ihvk"]
-[ext_resource type="Texture2D" uid="uid://x5uf80ajqjc8" path="res://assets/Gate (1).png" id="2_7ihvk"]
+[ext_resource type="Script" uid="uid://c5b8uq36ra10g" path="res://Objects/door_2.gd" id="1_jhhw3"]
+[ext_resource type="Texture2D" uid="uid://x5uf80ajqjc8" path="res://assets/Gate (1).png" id="2_0m0ms"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65nwm"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cbex"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qb5o"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ub17b"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6egxy"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ad1w"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(16, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pc655"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(32, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2xqv"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40rvn"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(0, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_87y00"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y81sb"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(32, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rof6n"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yv7m0"]
-atlas = ExtResource("2_7ihvk")
+atlas = ExtResource("2_0m0ms")
 region = Rect2(0, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_44dlc"]
@@ -189,8 +189,7 @@ _data = {
 }
 
 [node name="Door" type="Node2D" unique_id=59834607]
-script = ExtResource("1_7ihvk")
-heightUp = null
+script = ExtResource("1_jhhw3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1213442138]
 scale = Vector2(8, 8)
