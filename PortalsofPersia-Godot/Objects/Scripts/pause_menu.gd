@@ -18,6 +18,8 @@ func pauseMenu():
 
 func _on_menu_pressed() -> void:
 	Engine.time_scale = 1;
+	for i in get_tree().get_nodes_in_group("Portal") :
+		i.queue_free()
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 
