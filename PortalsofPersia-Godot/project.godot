@@ -21,7 +21,7 @@ config/icon="res://assets/icon.svg"
 
 [autoload]
 
-MuController="*res://Objects/muController.tscn"
+MuController="*res://Objects/mu_controller.gd"
 
 [global_group]
 

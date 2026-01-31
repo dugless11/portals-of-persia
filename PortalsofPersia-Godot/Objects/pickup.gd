@@ -7,7 +7,6 @@ var isDown: bool = false;
 func _process(delta: float) -> void:
 	if(Input.is_action_just_pressed("down") && isDown):
 		doThings()
-		queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if(isDown == true): return;
