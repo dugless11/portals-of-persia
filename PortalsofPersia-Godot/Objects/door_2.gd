@@ -2,7 +2,7 @@ extends Node2D
 
 @export var button: Node2D
 @export var button2: Node2D
-@export var heightUp = 256
+@export var heightUp = 512
 
 var downPos
 var upPos

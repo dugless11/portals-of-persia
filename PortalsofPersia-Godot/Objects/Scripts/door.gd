@@ -22,6 +22,6 @@ func button_change(is_down: bool) -> void:
 
 func _physics_process(delta: float) -> void:
 	if down_state:
-		position = position.lerp(down_pos, 0.03)
+		position = position.lerp(down_pos, 0.01)
 	else:
-		position = position.lerp(up_pos, 0.03)
+		position = position.lerp(up_pos, 0.01)
