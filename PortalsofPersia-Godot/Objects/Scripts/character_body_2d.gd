@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 	if shoot_cooldown > 0.0:
 		shoot_cooldown -= delta
 	if Input.is_action_just_pressed("shoot") and lamp and shoot_cooldown <= 0.0:
-		shoot_cooldown=2
+		shoot_cooldown=.5
 		var bulletInst = bulletNode.instantiate()
 		bulletInst.global_position = self.global_position
 		if $AnimatedSprite2D.flip_h:
