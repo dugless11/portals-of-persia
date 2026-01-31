@@ -73,7 +73,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j7m4"]
-size = Vector2(140.66666, 53.5)
+size = Vector2(140.66666, 36.708332)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j7m4"]
 atlas = ExtResource("3_i4unk")
@@ -102,6 +102,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4unk"]
+size = Vector2(140.66666, 33.416664)
+
 [node name="Button" type="Node2D" unique_id=564558552]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_schvp")
@@ -119,20 +122,22 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1909272495]
+position = Vector2(0, -21.645834)
 shape = SubResource("RectangleShape2D_5j7m4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1341958330]
 position = Vector2(3.3333333, -29.999998)
 scale = Vector2(8, 32)
 sprite_frames = SubResource("SpriteFrames_yoojv")
-animation = &"Unpressed"
+animation = &"Pressed"
 speed_scale = 4.0
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=1510483334]
+position = Vector2(3.3333333, -6.6666665)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1754224926]
-position = Vector2(0, -33.25)
-shape = SubResource("RectangleShape2D_5j7m4")
+position = Vector2(0, 20.041668)
+shape = SubResource("RectangleShape2D_i4unk")
 debug_color = Color(0.7941012, 0.07402735, 0.99999994, 0.41960785)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
