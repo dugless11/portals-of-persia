@@ -30,6 +30,7 @@ nextLevelFileName = "res://Scenes/intropt1.tscn"
 position = Vector2(100, 594)
 
 [node name="Door" parent="." unique_id=59834607 node_paths=PackedStringArray("button") instance=ExtResource("5_sqyb0")]
+z_index = -3
 position = Vector2(-125, 574)
 button = NodePath("../Button")
 
