@@ -54,7 +54,7 @@ func _physics_process(delta: float) -> void:
 			$AnimatedSprite2D.flip_h=true
 		else:
 			$AnimatedSprite2D.flip_h=false
-		velocity.x = direction * SPEED + direction*SPEED*(SPRINT_MULT-1)*int(Input.is_action_pressed("sprint"))
+		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if !JUMP and !$AnimatedSprite2D.animation == "Portal":
