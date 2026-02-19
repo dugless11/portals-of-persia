@@ -1,19 +1,16 @@
 extends Node2D
 
 @export var button: Node2D
-@export var button2: Node2D
-@export var heightUp = 196
+@export var heightUp = 64
 @export var crush_area: Area2D
  
 var downPos
 var upPos
 var button1Down = false
-var button2Down = false
 var moving_down = false;
 
 func _ready() -> void:
 	button.connect("buttonChanged", Callable(self, "_on_button1_changed"))
-	button2.connect("buttonChanged", Callable(self, "_on_button2_changed"))
 	crush_area.connect("body_entered", Callable(self, "_on_crush_area_body_entered"))
 	downPos = position
 	upPos = Vector2(position.x, position.y - heightUp)
@@ -22,19 +19,15 @@ func _ready() -> void:
 func _on_button1_changed(is_down: bool) -> void:
 	button1Down = is_down
 	print("Button 1 is ", button1Down)
-
-func _on_button2_changed(is_down: bool) -> void:
-	button2Down = is_down
-	print("Button 2 is ", button2Down)
 	
 func _on_crush_area_body_entered(body: Node) -> void:
 	if moving_down and body.scene_file_path == "res://Objects/Player.tscn":
 		get_tree().reload_current_scene()
 
 func _physics_process(delta: float) -> void:
-	if button1Down and button2Down:
-		position = lerp(position, upPos, 0.03)
+	if button1Down:
+		position = lerp(position, upPos, 0.01)
 		moving_down = false
 	else:
-		position = lerp(position, downPos, 0.01)
+		position = lerp(position, downPos, 0.03)
 		moving_down = true
