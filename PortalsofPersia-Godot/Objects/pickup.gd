@@ -1,11 +1,17 @@
 extends Node2D
 class_name AbstractPickup
-
+@export var sprite: CompressedTexture2D
 signal buttonChanged;
 var isDown: bool = false;
 
+func _ready() -> void:
+	if(sprite):
+		$AnimatedSprite2D.hide()
+		$Sprite2D.texture = sprite;
+	else:
+		$Sprite2D.hide()
 func _process(delta: float) -> void:
-	if(Input.is_action_just_pressed("down") && isDown):
+	if((Input.is_action_just_pressed("down") || Input.is_action_just_pressed("shoot")) && isDown):
 		doThings()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
