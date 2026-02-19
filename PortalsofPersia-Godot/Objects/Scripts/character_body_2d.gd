@@ -16,6 +16,8 @@ func _physics_process(delta: float) -> void:
 	if shoot_cooldown > 0.0:
 		shoot_cooldown -= delta
 	if Input.is_action_just_pressed("shoot") and lamp and shoot_cooldown <= 0.0:
+		if $AnimatedSprite2D.animation != "Jump":
+			$AnimatedSprite2D.play("Portal");
 		shoot_cooldown=.5
 		var bulletInst = bulletNode.instantiate()
 		bulletInst.global_position = self.global_position
@@ -55,9 +57,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if !JUMP:
+		if !JUMP and !$AnimatedSprite2D.animation == "Portal":
 			$AnimatedSprite2D.play("Stand")
-		
+	
 
 	move_and_slide()
 	
@@ -67,3 +69,9 @@ func _physics_process(delta: float) -> void:
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * PUSHFORCE)
+
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if $AnimatedSprite2D.animation == "Portal":
+		$AnimatedSprite2D.play("Stand")
+	pass # Replace with function body.
