@@ -49,10 +49,10 @@ theme_override_font_sizes/normal_font_size = 20
 text = "Use arrow keys to move"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=618510360]
-offset_left = 3145.0
-offset_top = 276.0
-offset_right = 4515.0
-offset_bottom = 879.33325
+offset_left = 3058.0
+offset_top = 269.0
+offset_right = 4428.0
+offset_bottom = 872.33325
 theme_override_fonts/normal_font = ExtResource("9_jgkgd")
 theme_override_font_sizes/normal_font_size = 20
 text = "Press space to throw a portal"
