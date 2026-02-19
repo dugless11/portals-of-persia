@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://csqshvmdj356v"]
+
+[ext_resource type="Script" uid="uid://bo46dtlbthf61" path="res://Objects/level_select.gd" id="1_2sqnl"]
+[ext_resource type="FontFile" uid="uid://l4ovprpdyykl" path="res://assets/antiquity-print.ttf" id="2_72w8f"]
+[ext_resource type="Texture2D" uid="uid://k7i6cxytiayc" path="res://assets/sprite_8 (1).png" id="3_s6o25"]
+[ext_resource type="PackedScene" uid="uid://drm2a4163asol" path="res://Objects/background.tscn" id="4_kb5mc"]
+[ext_resource type="Texture2D" uid="uid://crohskj1jc6yf" path="res://assets/parallax foreground trees.png" id="5_72w8f"]
+
+[node name="Level Select" type="Node2D" unique_id=1820213569]
+script = ExtResource("1_2sqnl")
+
+[node name="Control" type="Control" parent="." unique_id=1157066324]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=1299139271]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_right = 500.0
+offset_bottom = 158.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer" unique_id=2019837509]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer" unique_id=1650153020]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("2_72w8f")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave freq = 0.5]Level Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Control/CenterContainer/VBoxContainer" unique_id=699170969]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CenterContainer/VBoxContainer" unique_id=29175879]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureButton" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=2132547776]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_s6o25")
+texture_pressed = ExtResource("3_s6o25")
+texture_hover = ExtResource("3_s6o25")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" unique_id=1893402668]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.2627451, 0.2901961, 0.37254903, 1)
+theme_override_fonts/normal_font = ExtResource("2_72w8f")
+theme_override_font_sizes/normal_font_size = 50
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=377455518]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=170740843]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_s6o25")
+texture_pressed = ExtResource("3_s6o25")
+texture_hover = ExtResource("3_s6o25")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton2" unique_id=73508125]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.2627451, 0.2901961, 0.37254903, 1)
+theme_override_fonts/normal_font = ExtResource("2_72w8f")
+theme_override_font_sizes/normal_font_size = 50
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1223182724]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1596200783]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_s6o25")
+texture_pressed = ExtResource("3_s6o25")
+texture_hover = ExtResource("3_s6o25")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton3" unique_id=537426014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.2627451, 0.2901961, 0.37254903, 1)
+theme_override_fonts/normal_font = ExtResource("2_72w8f")
+theme_override_font_sizes/normal_font_size = 50
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" parent="." unique_id=1722245458 instance=ExtResource("4_kb5mc")]
+spd = 20
+
+[node name="Parallax2D9" type="Parallax2D" parent="." unique_id=1852123821]
+modulate = Color(1, 1, 1, 0.8745098)
+z_index = -1
+scroll_scale = Vector2(1.25, 1.25)
+repeat_size = Vector2(2600, 0)
+autoscroll = Vector2(200, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D9" unique_id=2023103026]
+modulate = Color(0.11981777, 0.22507572, 0.33023602, 1)
+position = Vector2(0, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("5_72w8f")
+centered = false
+
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
