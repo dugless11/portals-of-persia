@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cxo6ejtpl84dv" path="res://Scenes/pauseMenu.tscn" id="4_qwxmt"]
 [ext_resource type="Texture2D" uid="uid://bhvfyaruqtyt2" path="res://assets/Scherazade leap.png" id="4_t1tke"]
 [ext_resource type="Texture2D" uid="uid://dpkqjm3havidw" path="res://assets/Stand.png" id="5_u60sl"]
+[ext_resource type="Texture2D" uid="uid://dp7v87wxywi1k" path="res://assets/shoot.png" id="6_i4q3a"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u60sl"]
 
@@ -49,6 +50,14 @@ region = Rect2(96, 88, 48, 44)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5v5v8"]
 atlas = ExtResource("4_t1tke")
 region = Rect2(0, 132, 48, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywb4b"]
+atlas = ExtResource("6_i4q3a")
+region = Rect2(21, 0, 21, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cee6f"]
+atlas = ExtResource("6_i4q3a")
+region = Rect2(42, 0, 21, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t1tke"]
 atlas = ExtResource("4_gijnf")
@@ -125,6 +134,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ywb4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cee6f")
+}],
+"loop": false,
+"name": &"Portal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_t1tke")
 }, {
 "duration": 1.0,
@@ -148,7 +168,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qdtrf")
 }],
-"loop": true,
+"loop": false,
 "name": &"Run",
 "speed": 5.0
 }, {
@@ -195,7 +215,7 @@ visible = false
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=785778706]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_a14ne")
-animation = &"Jump"
-frame = 9
-frame_progress = 1.0
+animation = &"Portal"
 speed_scale = 2.5
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
