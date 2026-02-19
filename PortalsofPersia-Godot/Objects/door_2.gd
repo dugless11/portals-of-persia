@@ -2,7 +2,7 @@ extends Node2D
 
 @export var button: Node2D
 @export var button2: Node2D
-@export var heightUp = 512
+@export var heightUp = 196
 
 var downPos
 var upPos
@@ -28,4 +28,4 @@ func _physics_process(delta: float) -> void:
 	if button1Down and button2Down:
 		position = lerp(position, upPos, 0.03)
 	else:
-		position = lerp(position, downPos, 0.03)
+		position = lerp(position, downPos, 0.01)
