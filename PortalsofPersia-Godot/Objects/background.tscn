@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drm2a4163asol"]
 
-[ext_resource type="Script" uid="uid://b1srq0juexrqa" path="res://Objects/background.gd" id="1_xo5rv"]
+[ext_resource type="Script" uid="uid://b1srq0juexrqa" path="res://Objects/Scripts/background.gd" id="1_xo5rv"]
 [ext_resource type="Texture2D" uid="uid://de8qe3podgrik" path="res://assets/Parallax moon.png" id="2_yo3om"]
 [ext_resource type="Texture2D" uid="uid://4nl5c3au4vef" path="res://assets/parallax far mists.png" id="3_hfu2y"]
 [ext_resource type="Texture2D" uid="uid://bi76ohf5g0t0x" path="res://assets/parallax far dunes.png" id="3_vf5pd"]
