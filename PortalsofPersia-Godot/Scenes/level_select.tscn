@@ -123,6 +123,58 @@ text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="VSeparator3" type="VSeparator" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1687325168]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="TextureButton4" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1125988753]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_s6o25")
+texture_pressed = ExtResource("3_s6o25")
+texture_hover = ExtResource("3_s6o25")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton4" unique_id=68244681]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.2627451, 0.2901961, 0.37254903, 1)
+theme_override_fonts/normal_font = ExtResource("2_72w8f")
+theme_override_font_sizes/normal_font_size = 50
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator4" type="VSeparator" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=472415284]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="TextureButton5" type="TextureButton" parent="Control/CenterContainer/VBoxContainer/HBoxContainer" unique_id=1950189925]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("3_s6o25")
+texture_pressed = ExtResource("3_s6o25")
+texture_hover = ExtResource("3_s6o25")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton5" unique_id=223211896]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0.2627451, 0.2901961, 0.37254903, 1)
+theme_override_fonts/normal_font = ExtResource("2_72w8f")
+theme_override_font_sizes/normal_font_size = 50
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Background" parent="." unique_id=1722245458 instance=ExtResource("4_kb5mc")]
 spd = 20
 
@@ -143,3 +195,5 @@ centered = false
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton2" to="." method="_on_texture_button_2_pressed"]
 [connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton3" to="." method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton4" to="." method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton5" to="." method="_on_texture_button_5_pressed"]
