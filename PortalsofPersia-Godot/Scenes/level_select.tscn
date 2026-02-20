@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://l4ovprpdyykl" path="res://assets/antiquity-print.ttf" id="2_72w8f"]
 [ext_resource type="Texture2D" uid="uid://k7i6cxytiayc" path="res://assets/sprite_8 (1).png" id="3_s6o25"]
 [ext_resource type="PackedScene" uid="uid://drm2a4163asol" path="res://Objects/background.tscn" id="4_kb5mc"]
+[ext_resource type="Texture2D" uid="uid://chngy2hhy8gak" path="res://assets/sprite_8 (2).png" id="4_s6o25"]
 [ext_resource type="Texture2D" uid="uid://crohskj1jc6yf" path="res://assets/parallax foreground trees.png" id="5_72w8f"]
 
 [node name="Level Select" type="Node2D" unique_id=1820213569]
@@ -53,8 +54,8 @@ size_flags_horizontal = 4
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_s6o25")
-texture_pressed = ExtResource("3_s6o25")
-texture_hover = ExtResource("3_s6o25")
+texture_pressed = ExtResource("4_s6o25")
+texture_hover = ExtResource("4_s6o25")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton" unique_id=1893402668]
 layout_mode = 1
@@ -79,8 +80,8 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_s6o25")
-texture_pressed = ExtResource("3_s6o25")
-texture_hover = ExtResource("3_s6o25")
+texture_pressed = ExtResource("4_s6o25")
+texture_hover = ExtResource("4_s6o25")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton2" unique_id=73508125]
 layout_mode = 1
@@ -105,8 +106,8 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_s6o25")
-texture_pressed = ExtResource("3_s6o25")
-texture_hover = ExtResource("3_s6o25")
+texture_pressed = ExtResource("4_s6o25")
+texture_hover = ExtResource("4_s6o25")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton3" unique_id=537426014]
 layout_mode = 1
@@ -131,8 +132,8 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_s6o25")
-texture_pressed = ExtResource("3_s6o25")
-texture_hover = ExtResource("3_s6o25")
+texture_pressed = ExtResource("4_s6o25")
+texture_hover = ExtResource("4_s6o25")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton4" unique_id=68244681]
 layout_mode = 1
@@ -157,8 +158,8 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 texture_normal = ExtResource("3_s6o25")
-texture_pressed = ExtResource("3_s6o25")
-texture_hover = ExtResource("3_s6o25")
+texture_pressed = ExtResource("4_s6o25")
+texture_hover = ExtResource("4_s6o25")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/CenterContainer/VBoxContainer/HBoxContainer/TextureButton5" unique_id=223211896]
 layout_mode = 1
