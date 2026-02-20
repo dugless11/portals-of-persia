@@ -23,6 +23,11 @@ config/icon="res://assets/icon.svg"
 
 MuController="*res://Objects/mu_controller.gd"
 
+[display]
+
+window/size/resizable=false
+window/stretch/mode="canvas_items"
+
 [global_group]
 
 Portal=""
