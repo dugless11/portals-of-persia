@@ -7,6 +7,3 @@ func _ready() -> void:
 		MuController.stop()
 		MuController.stream = preload("res://assets/mu_ManaTwoPart2_idle.mp3")
 		MuController.play()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.

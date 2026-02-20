@@ -1,76 +1,8 @@
-[gd_scene format=3 uid="uid://bj7cmmgahvps1"]
+[gd_scene load_steps=9 format=3 uid="uid://bj7cmmgahvps1"]
 
 [ext_resource type="Script" uid="uid://c2o4hucfhrvv" path="res://Objects/Scripts/button.gd" id="1_schvp"]
 [ext_resource type="Texture2D" uid="uid://53cb0rg6a3bv" path="res://assets/icon.svg" id="2_i4unk"]
 [ext_resource type="Texture2D" uid="uid://bhluih6wtew2v" path="res://assets/plate.png" id="3_i4unk"]
-
-[sub_resource type="Animation" id="Animation_eq6vk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icon:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_058xg"]
-resource_name = "button_push_down"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icon:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335, 0.2416),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 12.13)]
-}
-
-[sub_resource type="Animation" id="Animation_5t0q4"]
-resource_name = "button_push_up"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icon:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 12.13), Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_schvp"]
-resource_name = "still"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Icon:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 0,
-"values": []
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kyk0m"]
-_data = {
-&"RESET": SubResource("Animation_eq6vk"),
-&"button_push_down": SubResource("Animation_058xg"),
-&"button_push_up": SubResource("Animation_5t0q4"),
-&"still": SubResource("Animation_schvp")
-}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5j7m4"]
 size = Vector2(140.66666, 36.708332)
@@ -105,37 +37,35 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i4unk"]
 size = Vector2(140.66666, 33.416664)
 
-[node name="Button" type="Node2D" unique_id=564558552]
+[node name="Button" type="Node2D"]
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_schvp")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1407053547]
+[node name="Icon" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("2_i4unk")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=654084259]
-libraries/ = SubResource("AnimationLibrary_kyk0m")
-blend_times = [&"RESET", &"button_push_down", 0.5, &"RESET", &"button_push_up", 0.5, &"RESET", &"still", 0.5]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=717300211]
+[node name="Area2D" type="Area2D" parent="."]
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1909272495]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -21.645834)
 shape = SubResource("RectangleShape2D_5j7m4")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1341958330]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3.3333333, -29.999998)
 scale = Vector2(8, 32)
 sprite_frames = SubResource("SpriteFrames_yoojv")
 animation = &"Unpressed"
 speed_scale = 4.0
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1510483334]
+[node name="Area2D2" type="Area2D" parent="."]
 position = Vector2(3.3333333, -6.6666665)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1754224926]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2(0, 20.041668)
 shape = SubResource("RectangleShape2D_i4unk")
 debug_color = Color(0.7941012, 0.07402735, 0.99999994, 0.41960785)

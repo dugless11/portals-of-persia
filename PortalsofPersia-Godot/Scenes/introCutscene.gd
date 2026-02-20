@@ -1,6 +1,8 @@
 extends AbstractCutscene
 
 func _ready() -> void:
+	MuController.stop()
+
 	moveObject($Camera2D/bar2, Transform2D($Camera2D/bar2.rotation_degrees, Vector2(-576.0, 324.0)), Transform2D($Camera2D/bar2.rotation_degrees, Vector2(-576.0, 324.0 - 100)), 0, 1, "lerp", $Camera2D.position, $Camera2D.position)
 	moveObject($Camera2D/bar1, Transform2D($Camera2D/bar1.rotation_degrees, Vector2(-576.0, -481.0)), Transform2D($Camera2D/bar1.rotation_degrees, Vector2(-576.0, -481.0 + 100)), 0, 1, "lerp", $Camera2D.position, $Camera2D.position)
 	moveObject($Camera2D, $Camera2D.transform, Transform2D($Camera2D.rotation_degrees, Vector2(315.0, 324 + 100.0)), 2, 3, "lerp", $Camera2D.position, $Camera2D.position)
