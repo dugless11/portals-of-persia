@@ -13,7 +13,7 @@ func explode(node: Node):
 
 
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	if(area.name == "Door" && area.get_parent().get_parent().get_parent().downState):
+	if(area.name == "Door"):
 		print("killing")
 		emit_signal("exploded", self)
 		explode(self)

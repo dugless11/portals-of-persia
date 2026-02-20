@@ -8,8 +8,19 @@ const SPRINT_MULT = 1.5
 const bulletNode = preload("res://Objects/bullet.tscn")
 var JUMP = false
 @export var lamp = true
+@export var firstLevel = false
+var cutsceneTimer = 8
 var shoot_cooldown := 0.0
 func _physics_process(delta: float) -> void:
+	if (firstLevel):
+		cutsceneTimer += delta
+		rotation = (3 * (cutsceneTimer*cutsceneTimer - 3)/7);
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+		else:
+			rotation = 0;
+			firstLevel = false
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

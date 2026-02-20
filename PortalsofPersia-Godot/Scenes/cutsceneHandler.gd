@@ -28,8 +28,9 @@ func Cinematic() -> void:
 	print("zooming in .,.,")
 
 func cutsceneStart() -> void:
-	for i in range(cutsceneMovingObjects.size()):
-		cutsceneMovingObjects[i].transform = cutsceneMovingStartingTransform[i]
+	pass
+	#for i in range(cutsceneMovingObjects.size()):
+		#cutsceneMovingObjects[i].transform = cutsceneMovingStartingTransform[i]
 
 func moveObject(object: Node2D, starting: Transform2D, ending: Transform2D, startTime: float, endTime: float, moveType: String, startPos: Vector2, endPos: Vector2):
 	cutsceneMovingObjects.append(object)
